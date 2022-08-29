@@ -103,7 +103,7 @@ a {
 .main-content {
   max-height: 120rem;
   margin: 0 auto;
-  padding: var(--gap);
+  padding: 10rem var(--gap);
 }
 
 .section {
@@ -178,7 +178,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: var(--gap);
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.intro-content p {
+  margin-top: 3rem;
 }
 
 .intro-text-content,
@@ -192,7 +196,7 @@ a {
   margin-top: var(--gap);
 }
 
-/* .intro-img img, */
+.intro-img img, 
 .intro-img svg {
   max-width: 100%;
   height: auto;
@@ -209,9 +213,9 @@ a {
 
 .jobs-content {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .grid-main-heading {
