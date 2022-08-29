@@ -14,14 +14,14 @@
   --font-title: "Montserrat", sans-serif;
   --font-text: "Open Sans", sans-serif;
   --font-bold: 700;
-  --font-xxlarge: 10rem;
-  --font-xlarge: 8rem;
-  --font-large: 6rem;
-  --font-medium: 4rem;
-  --font-normal: 2.3rem;
-  --font-small: 1.8rem;
-  --font-xsmall: 1.6rem;
-  --font-xxsmall: 1.4rem;
+  --font-xxlarge: 8rem;
+  --font-xlarge: 6rem;
+  --font-large: 5rem;
+  --font-medium: 3rem;
+  --font-normal: 2rem;
+  --font-small: 1.6rem;
+  --font-xsmall: 1.4rem;
+  --font-xxsmall: 1rem;
 }
 * {
   margin: 0;
@@ -38,7 +38,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: var(--font-normal);
   color: var(--primary-color);
-  line-height: 1.5;
 }
 
 h1,
@@ -52,35 +51,37 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-large);
+  font-size: var(--font-xlarge);
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: var(--font-medium);
 }
 
 h4 {
-  font-size: 4.5rem;
+  font-size: var(--font-normal);
 }
 
 h5 {
-  font-size: 4rem;
+  font-size: var(--font-small);
 }
 
 h6 {
-  font-size: 3.5rem;
+  font-size: var(--font-xsmall);
 }
 
 p {
   margin-bottom: 2rem;
+  font-size: var(--font-small);
 }
 
 a {
@@ -156,14 +157,14 @@ a {
 }
 
 .menu ul li a::after {
-content: '';
-position: absolute;
-bottom: 1.2rem;
-left: 50%;
-width: 0;
-height: 0.2rem;
-background: var(--secondary-color);
-transition: all 200ms ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background: var(--secondary-color);
+  transition: all 200ms ease-in-out;
 }
 
 .menu ul li a:hover::after {
@@ -180,19 +181,19 @@ transition: all 200ms ease-in-out;
   height: 100vh;
 }
 
-.intro-text-content, .intro-img {
+.intro-text-content,
+.intro-img {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-
 }
 
-.intro-text-content h2 {
-
+.intro-text-content {
+  margin-top: var(--gap);
 }
 
 /* .intro-img img, */
-.intro-img svg{
+.intro-img svg {
   max-width: 100%;
   height: auto;
 }
@@ -202,6 +203,45 @@ transition: all 200ms ease-in-out;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  height: auto;
+  height: 100vh;
   text-align: center;
+}
+
+.jobs-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100vh;
+}
+
+.grid-main-heading {
+  margin-bottom: 1rem;
+}
+
+.grid-description {
+  padding-bottom: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap);
+  counter-reset: grid-counter;
+}
+
+.grid h3 {
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 3rem;
+}
+
+.grid h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: var(--font-xlarge);
+  font-style: italic;
+  top: -1.9rem;
+  left: -1.3rem;
+  transform: rotate(5deg);
 }
