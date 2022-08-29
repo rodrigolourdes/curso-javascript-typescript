@@ -7,6 +7,7 @@
 
 :root {
   --primary-color: #0a1128;
+  --secondary-color: crimson;
   --white-color: #fff;
   --light-gray-color: #eee;
   --gap: 3rem;
@@ -27,6 +28,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   color: var(--primary-color);
+  line-height: 1.5;
 }
 
 h1,
@@ -80,7 +82,7 @@ a {
 }
 
 .main-content {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
   padding: var(--gap);
 }
@@ -89,14 +91,18 @@ a {
   min-height: 100vh;
 }
 
+.menu-spacing {
+  height: 65px;
+}
+
 .menu {
   background: var(--white-color);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
-  border-bottom: 1px solidvar(--light-gray-color);
+  width: 100%;
+  border-bottom: 0.1rem solidvar(--light-gray-color);
 }
 
 .menu-content {
@@ -127,14 +133,49 @@ a {
   font-size: 1.8rem;
   font-family: var(--font-text);
   color: var(--primary-color);
+  position: relative;
 }
 
 .menu ul li a::after {
 content: '';
 position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+bottom: 1.2rem;
+left: 50%;
+width: 0;
 height: 0.2rem;
-background: crimson;
+background: var(--secondary-color);
+transition: all 200ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  width: 50%;
+  left: 25%;
+}
+
+.intro-content {
+  position: relative;
+  top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  height: 100vh;
+}
+
+.intro-text-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+
+}
+
+.intro-text-content h2 {
+  font-size: 8rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.intro-img img{
+  max-width: 100%;
+  height: auto;
 }
