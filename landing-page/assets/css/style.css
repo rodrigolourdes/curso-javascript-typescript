@@ -80,12 +80,48 @@ h6 {
 }
 
 p {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: var(--font-small);
 }
 
 a {
   text-decoration: none;
+}
+
+.responsive-table {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  white-space: nowrap;
+  text-align: left;
+  padding: 0.7rem;
+  border: 0.1rem solid var(--light-gray-color);
+}
+
+table caption {
+  font-style: italic;
+  font-size: var(--font-small);
+  margin-bottom: 1rem;
+}
+
+tr td, table th {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: var(--font-small);
+}
+
+tfoot {
+  text-align: center;
+  background-color: var(--light-gray-color);
+  color: var(--primary-color);
+  font-size: var(--font-small);
 }
 
 .main-bg {
@@ -248,4 +284,22 @@ a {
   top: -1.9rem;
   left: -1.3rem;
   transform: rotate(5deg);
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+.gallery-img img {
+  transform: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+  transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.pricing {
+  overflow-x: auto;
 }
