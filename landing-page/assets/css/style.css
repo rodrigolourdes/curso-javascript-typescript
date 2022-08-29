@@ -31,6 +31,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +57,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1.2;
@@ -78,6 +79,10 @@ h6 {
   font-size: 3.5rem;
 }
 
+p {
+  margin-bottom: 2rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -91,10 +96,11 @@ a {
 
 .white-bg {
   background: var(--white-color);
+  color: var(--primary-color);
 }
 
 .main-content {
-  max-width: 120rem;
+  max-height: 120rem;
   margin: 0 auto;
   padding: var(--gap);
 }
@@ -115,6 +121,7 @@ a {
   right: 0;
   width: 100%;
   border-bottom: 0.1rem solidvar(--light-gray-color);
+  z-index: 1;
 }
 
 .menu-content {
@@ -188,4 +195,13 @@ transition: all 200ms ease-in-out;
 .intro-img svg{
   max-width: 100%;
   height: auto;
+}
+
+.top3-content {
+  max-width: 64rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: auto;
+  text-align: center;
 }
