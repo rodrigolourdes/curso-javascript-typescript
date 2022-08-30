@@ -94,6 +94,7 @@ a {
 }
 
 table {
+  max-width: 36rem;
   width: 100%;
   border-collapse: collapse;
 }
@@ -139,7 +140,7 @@ tfoot {
 .main-content {
   max-height: 120rem;
   margin: 0 auto;
-  padding: 10rem var(--gap);
+  padding: 8rem var(--gap);
 }
 
 .section {
@@ -247,13 +248,6 @@ tfoot {
   text-align: center;
 }
 
-.jobs-content {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  min-height: 100vh;
-}
-
 .grid-main-heading {
   margin-bottom: 1rem;
 }
@@ -300,6 +294,12 @@ tfoot {
   transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
 
-.pricing {
-  overflow-x: auto;
+.pricing-content {
+  position: relative;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  min-height: 100vh;
+  max-width: 64rem;
 }
