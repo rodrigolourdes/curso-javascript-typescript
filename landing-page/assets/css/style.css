@@ -93,8 +93,8 @@ a {
   overflow-x: auto;
 }
 
-table {
-  max-width: 36rem;
+table{
+  max-width: 64rem;
   width: 100%;
   border-collapse: collapse;
 }
@@ -295,11 +295,15 @@ tfoot {
 }
 
 .pricing-content {
-  position: relative;
-  top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: var(--gap);
-  min-height: 100vh;
   max-width: 64rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.white-bg-footer {
+  background: var(--white-color);
+  color: var(--primary-color);
 }
